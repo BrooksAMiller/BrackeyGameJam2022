@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -125,7 +124,7 @@ public class PlayerController : MonoBehaviour
         {
             GameController.gc.dialogueObject.SetActive(true);
             GameController.gc.dialogueObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.name;
-            GameController.gc.dialogueObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPC>().answers[UnityEngine.Random.Range(0, 1)];
+            GameController.gc.dialogueObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPC>().answers[Random.Range(0,interactableNPC.GetComponent<NPC>().answers.Length)];
         }
     }
 
