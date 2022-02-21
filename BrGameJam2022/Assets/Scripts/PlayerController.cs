@@ -125,6 +125,12 @@ public class PlayerController : MonoBehaviour
             GameController.gc.dialogueObject.SetActive(true);
             GameController.gc.dialogueObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.name;
             GameController.gc.dialogueObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPC>().answers[Random.Range(0,interactableNPC.GetComponent<NPC>().answers.Length)];
+
+            for (int i = 0; i < interactableNPC.GetComponent<NPC>().questions.Length; i++)
+            {
+                GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPC>().questions[i];
+                GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(true);
+            }
         }
     }
 
