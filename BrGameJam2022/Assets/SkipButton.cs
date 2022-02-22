@@ -8,4 +8,16 @@ public class SkipButton : MonoBehaviour
         {
             gameObject.transform.parent.gameObject.SetActive(false);
         }
+    public void AnswerOne()
+    {
+
+    }
+    public void AnswerTwo()
+    {
+
+    }
+    public void AnswerThree()
+    {
+
+    }
 }
