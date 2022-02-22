@@ -156,6 +156,7 @@ public class Alien : MonoBehaviour
                 Player.GetComponentInChildren<TextMeshPro>().text = "The Alien was caught! Press E to pick him up!";
                 if (Input.GetKey(KeyCode.E))
                 {
+                    Player.GetComponentInChildren<TextMeshPro>().text = "Take the Alien to the closest disposal facility";
                     state = States.CarriedByPlayer;
                     transform.parent = Player.transform;
                     Destroy(move);
