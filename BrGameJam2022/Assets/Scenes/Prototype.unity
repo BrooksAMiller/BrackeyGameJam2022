@@ -1338,8 +1338,8 @@ GameObject:
   m_Component:
   - component: {fileID: 373063211}
   - component: {fileID: 373063210}
-  - component: {fileID: 373063209}
   - component: {fileID: 373063212}
+  - component: {fileID: 373063209}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1356,17 +1356,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 373063208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9253aacf8cba329409a4535525698e71, type: 3}
+  m_Script: {fileID: 11500000, guid: 605b57d7f0f241b4fa9ae23786036f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   answers:
-  - Yes
-  - No
-  - Maybe
-  - Wow, did you see that green guy running towards the Gated Pizza House?
+  - Answer #1
+  - Answer #2
   questions:
-  - Did you see someone?
-  - Are you an alien?
+  - Question #1
+  - Question #2
 --- !u!212 &373063210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1426,7 +1424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373063208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.62, y: 0.5, z: 0}
+  m_LocalPosition: {x: 4.62, y: -1.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1737388509}
@@ -1706,14 +1704,14 @@ MonoBehaviour:
   CloseToVertWall: 0
   wallCheckRadius: 0.05
   wallChecker: {fileID: 918099484}
-  canInteractWithNPC: 0
-  interactableNPC: {fileID: 0}
   isGrounded: 0
   groundChecker: {fileID: 285482171}
   ladderMask:
     serializedVersion: 2
     m_Bits: 0
   distance: 2
+  canInteractWithNPC: 0
+  interactableNPC: {fileID: 0}
 --- !u!70 &497988344
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4959,7 +4957,7 @@ Transform:
   m_GameObject: {fileID: 1737388508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1, y: 0.15, z: -0.7514376}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 373063211}
   m_RootOrder: 0
@@ -5003,16 +5001,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 99c7318b08080442e8047cf09848f81e, type: 3}
   m_Color: {r: 0, g: 0.8310709, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 3, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1852136944
