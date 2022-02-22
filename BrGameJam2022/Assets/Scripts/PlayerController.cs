@@ -1,12 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController pc;
-
     public float walkSpeed;
     public float runSpeed;
     private float curSpeed;
@@ -19,9 +17,6 @@ public class PlayerController : MonoBehaviour
     public bool CloseToVertWall;
     public float wallCheckRadius;
     public Transform wallChecker;
-
-    public bool canInteractWithNPC;
-    public GameObject interactableNPC;
 
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
@@ -40,11 +35,7 @@ public class PlayerController : MonoBehaviour
     public float distance;
     private Animator anim;
 
-    private void Awake()
-    {
-        pc = this;
 
-    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -118,19 +109,6 @@ public class PlayerController : MonoBehaviour
         {
 
             anim.SetBool("IsJumping", true);
-        }
-
-        if(canInteractWithNPC && Input.GetKeyDown(KeyCode.E))
-        {
-            GameController.gc.dialogueObject.SetActive(true);
-            GameController.gc.dialogueObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.name;
-            GameController.gc.dialogueObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPC>().answers[Random.Range(0,interactableNPC.GetComponent<NPC>().answers.Length)];
-
-            for (int i = 0; i < interactableNPC.GetComponent<NPC>().questions.Length; i++)
-            {
-                GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPC>().questions[i];
-                GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(true);
-            }
         }
     }
 
