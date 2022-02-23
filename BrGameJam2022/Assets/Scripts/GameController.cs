@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
 
     public GameObject dialogueObject;
 
+    public GameObject dialogueButtonPrefab;
+
     void Awake()
     {
         gc = this;

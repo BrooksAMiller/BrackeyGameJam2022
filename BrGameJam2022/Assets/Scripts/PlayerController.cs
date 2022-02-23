@@ -154,14 +154,14 @@ public class PlayerController : MonoBehaviour
         if (canInteractWithNPC && Input.GetKeyDown(KeyCode.E))
         {
             GameController.gc.dialogueObject.SetActive(true);
-            GameController.gc.dialogueObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.name;
+            //GameController.gc.dialogueObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.name;
 
-            GameController.gc.dialogueObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPCDialogue>().answers[Random.Range(0, interactableNPC.GetComponent<NPCDialogue>().answers.Length)];
-            for (int i = 0; i < interactableNPC.GetComponent<NPCDialogue>().questions.Length; i++)
-            {
-                GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPCDialogue>().questions[i];
-                GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(true);
-            }
+            //GameController.gc.dialogueObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPCDialogue>().answers[Random.Range(0, interactableNPC.GetComponent<NPCDialogue>().answers.Length)];
+            //for (int i = 0; i < interactableNPC.GetComponent<NPCDialogue>().questions.Length; i++)
+            //{
+            //    GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPCDialogue>().questions[i];
+            //    GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(true);
+            //}
         }
     }
 
