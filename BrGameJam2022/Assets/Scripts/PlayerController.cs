@@ -39,6 +39,16 @@ public class PlayerController : MonoBehaviour
 
     public bool canInteractWithNPC;
     public GameObject interactableNPC;
+    
+    //temp for gun/neuralizer
+    public int ammo = 99;
+    public bool isShooting = false;
+    public GameObject barrelEnd;
+    public GameObject barrelEndFlipped;
+    public GameObject bulletPrefab;
+    public GameObject bulletContainer;
+
+
 
     private void Awake()
     {
@@ -51,11 +61,32 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         curSpeed = walkSpeed;
     } 
+
+
     private void Update()
     {
         
+        if (Input.GetMouseButton(0) && ammo > 0 && !isShooting)
+        {
+            anim.SetTrigger("Shoot");
+            isShooting = true;
+            anim.SetBool("isShooting", true);
+
+            if (lookingRight)
+            {
+                GameObject bullet = Instantiate(bulletPrefab, barrelEnd.transform);
+                bullet.GetComponent<Rigidbody2D>().AddForce(transform.right * 7, ForceMode2D.Impulse);
+            }
+            else
+            {
+                GameObject bullet = Instantiate(bulletPrefab, barrelEndFlipped.transform);
+                bullet.GetComponent<Rigidbody2D>().AddForce(-transform.right * 7, ForceMode2D.Impulse);
+            }
+
+        }
+        
         moveInput = Input.GetAxisRaw("Horizontal");
-       
+               
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isRunning = true;
@@ -182,5 +213,12 @@ public class PlayerController : MonoBehaviour
     public void OnLanding()
     {
         transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
+    }
+
+    //called by shoot animation trigger
+    public void stopShootAnimationCallback()
+    {
+        isShooting = false;
+        anim.SetBool("isShooting", false);
     }
 }

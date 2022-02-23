@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 206ecf44c6bca8a48b28ddc5e2991e70
+guid: 11e8223a35b664a48bcad7d6092586e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 540438343511966680
-    second: GP_NPC1_Idle_0
+      213: 5610041384314209768
+    second: agent_shoot_0
   - first:
-      213: -8600514907221039096
-    second: GP_NPC1_Idle_1
+      213: 4421540617269479366
+    second: agent_shoot_1
   - first:
-      213: 1995512526556847595
-    second: GP_NPC1_Idle_2
+      213: -1844817111716717715
+    second: agent_shoot_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -55,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,64 +112,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GP_NPC1_Idle_0
+      name: agent_shoot_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d308006fc5008700800000000000000
-      internalID: 540438343511966680
+      spriteID: 8e50a4f6aeedadd40800000000000000
+      internalID: 5610041384314209768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GP_NPC1_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80863a56245d4a880800000000000000
-      internalID: -8600514907221039096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GP_NPC1_Idle_2
+      name: agent_shoot_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bed534af11c71bb10800000000000000
-      internalID: 1995512526556847595
+      spriteID: 6c70f4cd3c77c5d30800000000000000
+      internalID: 4421540617269479366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agent_shoot_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b10947c94e566e0800000000000000
+      internalID: -1844817111716717715
       vertices: []
       indices: 
       edges: []
