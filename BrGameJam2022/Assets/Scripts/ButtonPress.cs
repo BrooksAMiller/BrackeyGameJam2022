@@ -6,10 +6,13 @@ public class ButtonPress : MonoBehaviour
 {
     Button butt;
     GameController gc;
+    PlayerController pc;
+
     public string triggerString;
 
     private void Start()
     {
+        pc = PlayerController.pc;
         gc = GameController.gc;
         butt = gameObject.GetComponent<Button>();
         butt.onClick.AddListener(delegate { ButtonPressed(triggerString); });
@@ -20,19 +23,19 @@ public class ButtonPress : MonoBehaviour
         switch (trigger)
         {
             case "next":
-                gc.GetComponent<Animator>().SetTrigger("next");
+                pc.interactableNPC.GetComponent<Animator>().SetTrigger("next");
                 break;
             case "back":
-                gc.GetComponent<Animator>().SetTrigger("back");
+                pc.interactableNPC.GetComponent<Animator>().SetTrigger("back");
                 break;
             case "option1":
-                gc.GetComponent<Animator>().SetTrigger("option1");
+                pc.interactableNPC.GetComponent<Animator>().SetTrigger("option1");
                 break;
             case "option2":
-                gc.GetComponent<Animator>().SetTrigger("option2");
+                pc.interactableNPC.GetComponent<Animator>().SetTrigger("option2");
                 break;
             case "option3":
-                gc.GetComponent<Animator>().SetTrigger("option3");
+                pc.interactableNPC.GetComponent<Animator>().SetTrigger("option3");
                 break;
         }
     }

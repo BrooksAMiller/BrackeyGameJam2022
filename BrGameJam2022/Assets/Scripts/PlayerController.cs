@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetMouseButton(0) && ammo > 0 && !isShooting)
+        if (Input.GetMouseButton(0) && ammo > 0 && !isShooting && !GameController.gc.dialogueObject.activeSelf)
         {
             anim.SetTrigger("Shoot");
             isShooting = true;
