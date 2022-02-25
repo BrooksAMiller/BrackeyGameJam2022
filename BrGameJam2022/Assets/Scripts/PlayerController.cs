@@ -52,6 +52,10 @@ public class PlayerController : MonoBehaviour
     public bool levelSwitchOptional = false;
     public bool onSurfaceLevel = true;
 
+    public int playerHealth = 5;
+    public GameObject playerHealthIcon;
+    public GameObject playerHealthBar;
+
     private void Awake()
     {
         pc = this;
@@ -62,8 +66,27 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         curSpeed = walkSpeed;
+
+        for (int i = 0; i < playerHealth; i++)
+        {
+            Instantiate(playerHealthIcon, playerHealthBar.transform);
+        }
     } 
 
+    public void TakeDamage(int dmg)
+    {
+        playerHealth = playerHealth - dmg;
+        Destroy(playerHealthBar.transform.GetChild(0).gameObject);
+        if(playerHealth <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if(playerHealth > 0)
+        {
+            Debug.Log("player health: " + playerHealth + " ACTIVATE SCREEN SHAKE");
+        }
+
+    }
 
     private void Update()
     {
