@@ -79,7 +79,7 @@ public class NPCMovement : MonoBehaviour
             target = targetQueue.Peek();
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-            if (Mathf.Round(transform.position.x) == target.position.x && Mathf.Round(transform.position.y) == target.position.y)
+            if (Mathf.Round(transform.position.x) == Mathf.Round(target.position.x) && Mathf.Round(transform.position.y) == Mathf.Round(target.position.y))
             {
                 targetHit++;
                 rb.velocity = Vector3.zero;
