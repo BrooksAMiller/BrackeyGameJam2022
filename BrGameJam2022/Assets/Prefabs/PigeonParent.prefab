@@ -195,12 +195,12 @@ GameObject:
   - component: {fileID: 8639173331595963998}
   - component: {fileID: 8639173331595963999}
   - component: {fileID: 8639173331595964000}
-  - component: {fileID: 8639173331595963994}
   - component: {fileID: 8639173331595963995}
   - component: {fileID: 8639173331595963997}
-  m_Layer: 8
+  - component: {fileID: 9091455244779900774}
+  m_Layer: 0
   m_Name: PigeonFlying_1
-  m_TagString: Untagged
+  m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,22 +291,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &8639173331595963994
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8639173331595964001}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!50 &8639173331595963995
 Rigidbody2D:
   serializedVersion: 4
@@ -335,7 +319,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8639173331595964001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9ca6cfefbba8d94b975d58cb60742d6, type: 3}
   m_Name: 
@@ -352,3 +336,19 @@ MonoBehaviour:
   target3: {fileID: 8639173331016865279}
   rb: {fileID: 8639173331595963995}
   dir: {x: 0, y: 0, z: 0}
+--- !u!58 &9091455244779900774
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8639173331595964001}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0000019073486}
+  serializedVersion: 2
+  m_Radius: 0.25
