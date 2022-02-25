@@ -499,7 +499,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Run
-  m_Speed: 0.7
+  m_Speed: 0.65
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101221833045595116}
@@ -615,10 +615,10 @@ AnimatorStateMachine:
     m_Position: {x: 60, y: -372, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102153505158935472}
-    m_Position: {x: 520, y: -380, z: 0}
+    m_Position: {x: 780, y: -380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102291815209332310}
-    m_Position: {x: 540, y: -240, z: 0}
+    m_Position: {x: 550, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102238480169631906}
     m_Position: {x: 300, y: -110, z: 0}
@@ -767,6 +767,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: isShooting
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsGrounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3160771299107266233}

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -48,7 +49,8 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletContainer;
 
-
+    public bool levelSwitchOptional = false;
+    public bool onSurfaceLevel = true;
 
     private void Awake()
     {
@@ -65,7 +67,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        
+        if(levelSwitchOptional && Input.GetKeyDown(KeyCode.E))
+        {
+            if (onSurfaceLevel)
+                SceneManager.LoadScene(2);
+            else
+                SceneManager.LoadScene(1);
+        }
+
         if (Input.GetMouseButton(0) && ammo > 0 && !isShooting && !GameController.gc.dialogueObject.activeSelf)
         {
             anim.SetTrigger("Shoot");
