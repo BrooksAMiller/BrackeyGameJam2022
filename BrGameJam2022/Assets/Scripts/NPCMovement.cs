@@ -53,8 +53,6 @@ public class NPCMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        
         
         if (inPlayerRange)
         {
@@ -75,7 +73,6 @@ public class NPCMovement : MonoBehaviour
         } 
         else
         {
-            
             target = targetQueue.Peek();
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -139,6 +136,14 @@ public class NPCMovement : MonoBehaviour
             targetQueue.Enqueue(target1);
         }
         target = targetQueue.Dequeue();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerController.pc.TakeDamage(1);
+        }
     }
 
 
