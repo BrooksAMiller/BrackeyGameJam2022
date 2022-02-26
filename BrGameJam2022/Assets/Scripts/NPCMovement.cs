@@ -141,5 +141,11 @@ public class NPCMovement : MonoBehaviour
         target = targetQueue.Dequeue();
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerController.pc.TakeDamage(1);
+        }
+    }
 }
