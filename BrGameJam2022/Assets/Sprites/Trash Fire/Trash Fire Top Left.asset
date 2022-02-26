@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Trash Fire Top Left
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -3372749409675854516, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  - {fileID: 9008338293272881385, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  - {fileID: 7858907812443677094, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  - {fileID: 4651506394747496367, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
   - {fileID: 5249638466473108597, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: 9008338293272881385, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: -3372749409675854516, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: 9197307672468920353, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: -8795224305601983935, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
   m_MinSpeed: 6
   m_MaxSpeed: 6
   m_AnimationStartTime: 0
