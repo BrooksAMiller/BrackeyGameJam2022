@@ -13,6 +13,10 @@ public class Manhole : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
             PlayerController.pc.levelSwitchOptional = true;
         }
+        if (collision.gameObject.tag == "AlienEscapee")
+        {
+            Destroy(collision.gameObject);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
