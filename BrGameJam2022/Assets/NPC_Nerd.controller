@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: You ever hear of Space Kush? It will send you to another planet man
+  text: 'Time travel only works in the movies. '
   options:
-  - option: I am not a cop. Have you seen anything suspious?
-    action: 2
+  - option: I'm looking for someone, did you see any odd anyone run by here?
+    action: 3
   changeBG: {fileID: 0}
   extraMethod: 
 --- !u!1101 &-5361781314754975347
@@ -38,6 +38,31 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.05
   m_TransitionOffset: 0
   m_ExitTime: 0.05
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &-4030622762426843780
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option1
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1642968173468279977}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -110,6 +135,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3908027866178952212}
+  - {fileID: 6987468363048424399}
   m_StateMachineBehaviours:
   - {fileID: 3958933952665831787}
   m_Position: {x: 50, y: 50, z: 0}
@@ -132,7 +158,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NPC_RedShirtDialogue
+  m_Name: NPC_Nerd
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: next
@@ -178,6 +204,31 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!1101 &1902010304062802200
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option1
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1642968173468279977}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &1903354518276536818
 AnimatorState:
   serializedVersion: 6
@@ -190,6 +241,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6612621513922111966}
+  - {fileID: -4030622762426843780}
   m_StateMachineBehaviours:
   - {fileID: -7775708850843814862}
   m_Position: {x: 50, y: 50, z: 0}
@@ -206,6 +258,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &2644002377395349585
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option3
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1903354518276536818}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!114 &3125299634863981328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -218,8 +295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Yeah little green dude is server za over at GateWat Pizza
-  options: []
+  text: Gateway Pizza has a new employee that I did not recognize, maybe you are
+    looking for him?
+  options:
+  - option: And my ear piece was made in the future.
+    action: 4
   changeBG: {fileID: 0}
   extraMethod: 
 --- !u!1101 &3908027866178952212
@@ -231,7 +311,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: option1
+    m_ConditionEvent: option2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5483895880382562362}
@@ -259,10 +339,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: I ain't talking to no fuzz!
+  text: My Wifu told me not to talk to strangers.
   options:
-  - option: I am not a cop. Have you seen anything suspious?
-    action: 2
+  - option: I'm looking for someone, did you see any odd anyone run by here?
+    action: 3
   changeBG: {fileID: 0}
   extraMethod: 
 --- !u!1102 &5483895880382562362
@@ -275,7 +355,9 @@ AnimatorState:
   m_Name: Neutral
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 1902010304062802200}
+  - {fileID: 2644002377395349585}
   m_StateMachineBehaviours:
   - {fileID: 3125299634863981328}
   m_Position: {x: 50, y: 50, z: 0}
@@ -301,7 +383,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: option1
+    m_ConditionEvent: option2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5483895880382562362}
@@ -312,6 +394,31 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.05
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &6987468363048424399
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option3
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1903354518276536818}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -385,14 +492,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Are you a cop? You have to tell me if you are a cop
+  text: Neat Ear piece, is it 5G? That causes cancer you know.
   options:
-  - option: I am a Government agent here to nuetralize a threat to national secuirty.
-      Tell me where the little green man is!
+  - option: Tell me where the little green man is or you will be impeding my mission
+      to ensure national security. You would not do well in prison.
     action: 2
-  - option: I am not a cop. Have you seen anything suspious?
+  - option: Classified military technology, kid. I'm looking for someone, did you
+      see any odd anyone run by here?
     action: 3
-  - option: 'You know that''s only in movies right? '
+  - option: My ear piece was made in the future.
     action: 4
   changeBG: {fileID: 0}
   extraMethod: 
