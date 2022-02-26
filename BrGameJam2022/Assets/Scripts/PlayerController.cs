@@ -96,6 +96,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameController.gc.pauseMenu.activeSelf)
+                GameController.gc.pauseMenu.SetActive(false);
+            else
+            {
+                GameController.gc.pauseMenu.SetActive(true);
+            }
+        }
+
         if(levelSwitchOptional && Input.GetKeyDown(KeyCode.E))
         {
             if (onSurfaceLevel)

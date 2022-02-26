@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
 
     public GameObject flashBangPanel;
 
+    public GameObject pauseMenu;
+
     void Awake()
     {
         gc = this;
