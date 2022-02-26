@@ -63,6 +63,11 @@ public class PlayerController : MonoBehaviour
 
     public bool playerAlive = true;
 
+    public AudioClip[] sounds;
+    private AudioSource src;
+    private AudioSource footStepSrc;
+    public AudioClip pigeonDeathSound;
+
     private void Awake()
     {
         pc = this;
@@ -70,6 +75,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        footStepSrc = transform.GetChild(0).gameObject.GetComponent<AudioSource>();
+        src = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         curSpeed = walkSpeed;
@@ -82,11 +89,14 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
+        src.PlayOneShot(sounds[1]);
+
         Camera.main.gameObject.GetComponent<Animator>().SetTrigger("shakeIt");
         playerHealth = playerHealth - dmg;
         Destroy(playerHealthBar.transform.GetChild(0).gameObject);
         if(playerHealth <= 0)
         {
+            src.PlayOneShot(sounds[2]);
             playerAlive = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -119,6 +129,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && ammo > 0 && !isShooting && !GameController.gc.dialogueObject.activeSelf && timeStamp <= Time.time)
         {
+            src.PlayOneShot(sounds[0]);
             anim.SetTrigger("Shoot");
             isShooting = true;
             anim.SetBool("isShooting", true);
@@ -222,6 +233,19 @@ public class PlayerController : MonoBehaviour
             //    GameController.gc.dialogueObject.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(true);
             //}
         }
+
+
+            if (!footStepSrc.isPlaying)
+            {
+
+                if ((rb.velocity.x > 0.1f || rb.velocity.x < -0.1f) && isGrounded)
+                {
+                    footStepSrc.Play();
+                }
+                else
+                    footStepSrc.Stop();
+            }
+
     }
 
     
@@ -271,7 +295,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnLanding()
     {
-        transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
+        Debug.Log("landing");
+        //transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
     }
 
     //called by shoot animation trigger

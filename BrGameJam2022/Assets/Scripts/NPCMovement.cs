@@ -24,6 +24,12 @@ public class NPCMovement : MonoBehaviour
     private bool isInAttackRange;
     private bool inPlayerRange;
     private int targetHit = 0;
+
+
+    public AudioClip attackSound;
+    public AudioClip deathSound;
+    public AudioClip flapSound;
+
     Queue<Transform> targetQueue = new Queue<Transform>();
     void Start()
     {
@@ -56,6 +62,7 @@ public class NPCMovement : MonoBehaviour
         {
             MoveCharacter(movement);
             target = GameObject.FindWithTag("Player").transform;
+            GetComponent<AudioSource>().PlayOneShot(flapSound);
             Debug.Log("Player is target");
             if (Mathf.Round(transform.position.x) == (target.position.x) && Mathf.Round(transform.position.y) == (target.position.y))
             {
@@ -118,6 +125,7 @@ public class NPCMovement : MonoBehaviour
 
     private void nextTarget()
     {
+
         if (targetHit == 1)
         {
             targetQueue.Enqueue(target2);
@@ -142,6 +150,7 @@ public class NPCMovement : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerController.pc.TakeDamage(1);
+            GetComponent<AudioSource>().PlayOneShot(attackSound);
         }
     }
 }

@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Mob")
         {
+            PlayerController.pc.gameObject.GetComponent<AudioSource>().PlayOneShot(PlayerController.pc.pigeonDeathSound);
             Destroy(collision.gameObject);
         }
         Destroy(gameObject);
