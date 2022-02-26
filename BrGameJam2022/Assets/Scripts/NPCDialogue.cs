@@ -18,7 +18,7 @@ public class NPCDialogue : MonoBehaviour
             {
                 transform.GetChild(0).gameObject.SetActive(true);
                 PlayerController.pc.canInteractWithNPC = true;
-                PlayerController.pc.interactableNPC = gameObject;
+                PlayerController.pc.interactableNPC = this.gameObject;
             }
 
         }
