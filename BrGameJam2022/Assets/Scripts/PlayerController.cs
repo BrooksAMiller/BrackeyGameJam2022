@@ -234,17 +234,21 @@ public class PlayerController : MonoBehaviour
             //}
         }
 
+        if (isRunning)
+            footStepSrc.pitch = 2;
+        else
+            footStepSrc.pitch = 1;
 
-            if (!footStepSrc.isPlaying)
+        if (!footStepSrc.isPlaying)
+        {
+
+            if ((rb.velocity.x > 0.1f || rb.velocity.x < -0.1f) && isGrounded)
             {
-
-                if ((rb.velocity.x > 0.1f || rb.velocity.x < -0.1f) && isGrounded)
-                {
-                    footStepSrc.Play();
-                }
-                else
-                    footStepSrc.Stop();
+                footStepSrc.Play();
             }
+            else
+                footStepSrc.Stop();
+        }
 
     }
 
