@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: You ever hear of Space Kush? It will send you to another planet man
+  text: "It's my home away from no home. At least the spiked ground here is from
+    government negligence and not government mandated anti-homeless measures. I\u2019ll
+    take vats of acid over capitalism any day."
   options:
-  - option: I am not a cop. Have you seen anything suspious?
+  - option: Tell me where the green man went or I will tell society you are living
+      here tax free.
     action: 2
+  - option: Where did the little green man go?
+    action: 3
   changeBG: {fileID: 0}
   extraMethod: 
 --- !u!1101 &-5361781314754975347
@@ -68,6 +73,31 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &-2672955774986520752
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option1
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1642968173468279977}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-2123877364105540491
 AnimatorState:
   serializedVersion: 6
@@ -98,6 +128,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-2054441973255515296
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option1
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1642968173468279977}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-1642968173468279977
 AnimatorState:
   serializedVersion: 6
@@ -110,6 +165,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3908027866178952212}
+  - {fileID: 1059845718784937814}
   m_StateMachineBehaviours:
   - {fileID: 3958933952665831787}
   m_Position: {x: 50, y: 50, z: 0}
@@ -178,6 +234,53 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!1101 &5741420852301132
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -2123877364105540491}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &1059845718784937814
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option3
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1903354518276536818}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &1903354518276536818
 AnimatorState:
   serializedVersion: 6
@@ -190,6 +293,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6612621513922111966}
+  - {fileID: -2054441973255515296}
   m_StateMachineBehaviours:
   - {fileID: -7775708850843814862}
   m_Position: {x: 50, y: 50, z: 0}
@@ -218,10 +322,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Yeah little green dude is server za over at GateWat Pizza
-  options: []
+  text: He just ran past, and he had a bunch of the weird pigeons with the red eye
+    with him. I didn't think much of it on account of the acid fumes I've inhaled.
+  options:
+  - option: Tell me where the green man went or I will tell society you are living
+      here tax free.
+    action: 2
+  - option: Nice place you got here, it could use some ventilation though, and maybe
+      a throw rug.
+    action: 4
   changeBG: {fileID: 0}
   extraMethod: 
+--- !u!1101 &3827879719443948749
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option3
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1903354518276536818}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &3908027866178952212
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -231,7 +367,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: option1
+    m_ConditionEvent: option2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5483895880382562362}
@@ -259,10 +395,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: I ain't talking to no fuzz!
+  text: Let that tax man try to get down here, there are literally pools of acid
+    and evil attacking pigeons.
   options:
-  - option: I am not a cop. Have you seen anything suspious?
-    action: 2
+  - option: Where did the little green man go?
+    action: 3
+  - option: Nice place you got here, it could use some ventilation though, and maybe
+      a throw rug.
+    action: 4
   changeBG: {fileID: 0}
   extraMethod: 
 --- !u!1102 &5483895880382562362
@@ -275,7 +415,9 @@ AnimatorState:
   m_Name: Neutral
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: -2672955774986520752}
+  - {fileID: 3827879719443948749}
   m_StateMachineBehaviours:
   - {fileID: 3125299634863981328}
   m_Position: {x: 50, y: 50, z: 0}
@@ -301,7 +443,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: option1
+    m_ConditionEvent: option2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5483895880382562362}
@@ -385,14 +527,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Are you a cop? You have to tell me if you are a cop
+  text: Hey got any spare change, just kidding.. sort of.
   options:
-  - option: I am a Government agent here to nuetralize a threat to national secuirty.
-      Tell me where the little green man is!
+  - option: Tell me where the green man went or I will tell society you are living
+      here tax free.
     action: 2
-  - option: I am not a cop. Have you seen anything suspious?
+  - option: Where did the little green man go?
     action: 3
-  - option: 'You know that''s only in movies right? '
+  - option: Nice place you got here, it could use some ventilation though, and maybe
+      a throw rug.
     action: 4
   changeBG: {fileID: 0}
   extraMethod: 

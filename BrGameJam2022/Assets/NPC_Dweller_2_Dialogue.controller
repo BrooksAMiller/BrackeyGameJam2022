@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1101 &-7884770024025950211
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option1
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1642968173468279977}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!114 &-7775708850843814862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12,12 +37,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: You ever hear of Space Kush? It will send you to another planet man
+  text: Ok great no problem I have a card reader. Thank the corporate overlords for
+    tap to pay, am I right?
   options:
-  - option: I am not a cop. Have you seen anything suspious?
+  - option: If you don't tell me where the little green man went I will call child
+      services on the account of you living in a sewer.
     action: 2
+  - option: I'll give you a five if you tell me where the green guy went?
+    action: 3
   changeBG: {fileID: 0}
   extraMethod: 
+--- !u!1101 &-7136043109865128589
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option3
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1903354518276536818}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &-5361781314754975347
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -110,6 +164,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3908027866178952212}
+  - {fileID: -7136043109865128589}
   m_StateMachineBehaviours:
   - {fileID: 3958933952665831787}
   m_Position: {x: 50, y: 50, z: 0}
@@ -126,6 +181,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-1294722830564744186
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option1
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -1642968173468279977}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -190,6 +270,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6612621513922111966}
+  - {fileID: -1294722830564744186}
   m_StateMachineBehaviours:
   - {fileID: -7775708850843814862}
   m_Position: {x: 50, y: 50, z: 0}
@@ -218,8 +299,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Yeah little green dude is server za over at GateWat Pizza
-  options: []
+  text: Easiest five I've made all week, he went further down into the sewer. Watch
+    out for the pools of acid... and the spikes.. and for the demonic pigeons. What
+    are they feeding those things anyway?
+  options:
+  - option: If you don't tell me where the little green man went I will call child
+      services on the account of you living in a sewer.
+    action: 2
+  - option: Sorry, all I have is a credit card, by the way did you see a little green
+      guy run through here?
+    action: 4
   changeBG: {fileID: 0}
   extraMethod: 
 --- !u!1101 &3908027866178952212
@@ -231,7 +320,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: option1
+    m_ConditionEvent: option2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5483895880382562362}
@@ -259,10 +348,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: I ain't talking to no fuzz!
+  text: Ok, I lied about having a kid but the car thing. That is real.
   options:
-  - option: I am not a cop. Have you seen anything suspious?
-    action: 2
+  - option: I'll give you a five if you tell me where the green guy went?
+    action: 3
+  - option: Sorry, all I have is a credit card, by the way did you see a little green
+      guy run through here?
+    action: 4
   changeBG: {fileID: 0}
   extraMethod: 
 --- !u!1102 &5483895880382562362
@@ -275,7 +367,9 @@ AnimatorState:
   m_Name: Neutral
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 5810176453316616967}
+  - {fileID: -7884770024025950211}
   m_StateMachineBehaviours:
   - {fileID: 3125299634863981328}
   m_Position: {x: 50, y: 50, z: 0}
@@ -292,6 +386,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &5810176453316616967
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: option3
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 1903354518276536818}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &6612621513922111966
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -301,7 +420,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: option1
+    m_ConditionEvent: option2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5483895880382562362}
@@ -385,14 +504,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be074393c2aa1d4f8cd4ad7ab3d8c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Are you a cop? You have to tell me if you are a cop
+  text: Can you help me out? My car ran out of gas and I need to pick up my kid.
   options:
-  - option: I am a Government agent here to nuetralize a threat to national secuirty.
-      Tell me where the little green man is!
+  - option: If you don't tell me where the little green man went I will call child
+      services on the account of you living in a sewer.
     action: 2
-  - option: I am not a cop. Have you seen anything suspious?
+  - option: I'll give you a five if you tell me where the green guy went?
     action: 3
-  - option: 'You know that''s only in movies right? '
+  - option: Sorry, all I have is a credit card, by the way did you see a little green
+      guy run through here?
     action: 4
   changeBG: {fileID: 0}
   extraMethod: 
