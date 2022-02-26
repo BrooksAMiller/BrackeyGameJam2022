@@ -48,6 +48,8 @@ public class PlayerController : MonoBehaviour
     public GameObject barrelEndFlipped;
     public GameObject bulletPrefab;
     public GameObject bulletContainer;
+    private float timeStamp;
+    public float coolDownTimer = 0.25f;
 
     public bool levelSwitchOptional = false;
     public bool onSurfaceLevel = true;
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
     public int playerHealth = 5;
     public GameObject playerHealthIcon;
     public GameObject playerHealthBar;
+
 
     private void Awake()
     {
@@ -98,7 +101,7 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene(1);
         }
 
-        if (Input.GetMouseButton(0) && ammo > 0 && !isShooting && !GameController.gc.dialogueObject.activeSelf)
+        if (Input.GetMouseButtonDown(0) && ammo > 0 && !isShooting && !GameController.gc.dialogueObject.activeSelf && timeStamp <= Time.time)
         {
             anim.SetTrigger("Shoot");
             isShooting = true;
@@ -107,12 +110,18 @@ public class PlayerController : MonoBehaviour
             if (lookingRight)
             {
                 GameObject bullet = Instantiate(bulletPrefab, barrelEnd.transform);
+                bullet.transform.parent = bulletContainer.transform;
                 bullet.GetComponent<Rigidbody2D>().AddForce(transform.right * 7, ForceMode2D.Impulse);
+                timeStamp = Time.time + coolDownTimer;
+
             }
             else
             {
                 GameObject bullet = Instantiate(bulletPrefab, barrelEndFlipped.transform);
+                bullet.transform.parent = bulletContainer.transform;
                 bullet.GetComponent<Rigidbody2D>().AddForce(-transform.right * 7, ForceMode2D.Impulse);
+                timeStamp = Time.time + coolDownTimer;
+
             }
 
         }
@@ -185,6 +194,7 @@ public class PlayerController : MonoBehaviour
 
         if (canInteractWithNPC && Input.GetKeyDown(KeyCode.E))
         {
+            interactableNPC.GetComponent<Animator>().enabled = true;
             GameController.gc.dialogueObject.SetActive(true);
             //GameController.gc.dialogueObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.name;
 

@@ -30,6 +30,11 @@ public class DialogueNode : StateMachineBehaviour
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        foreach (Transform child in GameController.gc.dialogueObject.transform.GetChild(2).transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+
         textPanel = GameController.gc.dialogueObject.transform.GetChild(1).gameObject;
         Debug.Log("adding: " + text);
         textPanel.GetComponent<TextMeshProUGUI>().text = text;
@@ -46,7 +51,7 @@ public class DialogueNode : StateMachineBehaviour
         }
         if(extraMethod != "")
         {
-            animator.SendMessage(extraMethod, GameController.gc);
+            animator.SendMessage(extraMethod, this);
         }
     }
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
@@ -63,8 +68,4 @@ public class DialogueNode : StateMachineBehaviour
         }
     }
 
-    void ShowMan()
-    {
-
-    }
 }

@@ -10,10 +10,20 @@ public class GameController : MonoBehaviour
 
     public GameObject dialogueButtonPrefab;
 
+    public GameObject flashBangPanel;
+
     void Awake()
     {
         gc = this;
     }
 
+    public void Invoker(string func)
+    {
+        Invoke(func, 0.1f);
+    }
 
+    public void ActivateFlashbang()
+    {
+        flashBangPanel.SetActive(true);
+    }
 }
