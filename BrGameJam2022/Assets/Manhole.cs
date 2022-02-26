@@ -8,7 +8,7 @@ public class Manhole : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" && PlayerController.pc.canClimbDownManhole)
         {
             transform.GetChild(0).gameObject.SetActive(true);
             PlayerController.pc.levelSwitchOptional = true;

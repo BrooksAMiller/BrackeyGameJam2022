@@ -12,6 +12,7 @@ public class Flash : MonoBehaviour
     {
         foodTruck.GetComponent<SpriteRenderer>().sprite = foodTruckWithoutAlien;
         fleeingAlien.SetActive(true);
+        PlayerController.pc.canClimbDownManhole = true;
     }
 
     public void DisableMe()
