@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Acid Pool Top Left
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1716393871582561865, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
-  - {fileID: 3699812307112395982, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
-  - {fileID: -7238771396487510248, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
-  - {fileID: -5289239217001272056, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
   - {fileID: 1895974949526892373, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: -3783246410891607780, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: -3436242688182521116, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: -4386674188209834232, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: -1039435175937815787, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
   m_MinSpeed: 6
   m_MaxSpeed: 6
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 2
+  m_TileColliderType: 1

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: Acid Pool Full
+  m_Name: Trash Fire Top Left
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -5769367647725184780, guid: 6a90d13773221864eab02df613921ddb, type: 3}
-  - {fileID: -2798233750282503966, guid: 6a90d13773221864eab02df613921ddb, type: 3}
-  - {fileID: 4061546893781624486, guid: 6a90d13773221864eab02df613921ddb, type: 3}
-  - {fileID: -4023687610328865921, guid: 6a90d13773221864eab02df613921ddb, type: 3}
-  - {fileID: 429174995048158508, guid: 6a90d13773221864eab02df613921ddb, type: 3}
+  - {fileID: -3372749409675854516, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: 9008338293272881385, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: 7858907812443677094, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: 4651506394747496367, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
+  - {fileID: 5249638466473108597, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
   m_MinSpeed: 6
   m_MaxSpeed: 6
   m_AnimationStartTime: 0

@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Acid Top Right
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 3649660095557211802, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: 5218000351072730365, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: 6828906802970127400, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: 4821744989492525047, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  - {fileID: 4675639545238660849, guid: 0cb3d7e20a3c13647b5dac98a781bb7e, type: 3}
+  m_MinSpeed: 6
+  m_MaxSpeed: 6
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 0
+  m_TileColliderType: 1
