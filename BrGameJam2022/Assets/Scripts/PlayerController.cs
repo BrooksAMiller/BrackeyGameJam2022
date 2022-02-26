@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
+        Camera.main.gameObject.GetComponent<Animator>().SetTrigger("shakeIt");
         playerHealth = playerHealth - dmg;
         Destroy(playerHealthBar.transform.GetChild(0).gameObject);
         if(playerHealth <= 0)
