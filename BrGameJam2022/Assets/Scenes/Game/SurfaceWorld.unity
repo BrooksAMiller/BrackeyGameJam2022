@@ -2689,6 +2689,8 @@ MonoBehaviour:
   playerHealth: 5
   playerHealthIcon: {fileID: 8297963481570538989, guid: f404d0196fb7d3944970d31703e49824, type: 3}
   playerHealthBar: {fileID: 497988338}
+  canClimbDownManhole: 0
+  canDiscoverAlien: 0
 --- !u!70 &497988344
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
