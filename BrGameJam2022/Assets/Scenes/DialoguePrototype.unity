@@ -2630,6 +2630,9 @@ MonoBehaviour:
   bulletContainer: {fileID: 52407723}
   levelSwitchOptional: 0
   onSurfaceLevel: 1
+  playerHealth: 5
+  playerHealthIcon: {fileID: 0}
+  playerHealthBar: {fileID: 0}
 --- !u!70 &497988344
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26880,7 +26883,7 @@ GameObject:
   - component: {fileID: 1554524119}
   - component: {fileID: 1554524121}
   m_Layer: 5
-  m_Name: Background
+  m_Name: ContainerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
