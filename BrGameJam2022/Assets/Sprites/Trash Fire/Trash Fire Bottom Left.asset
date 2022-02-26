@@ -12,14 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: Trash Fire Bottom Left
   m_EditorClassIdentifier: 
-  m_AnimatedSprites:
-  - {fileID: -3643593390822855029, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  - {fileID: -7689658179532621159, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  - {fileID: -6467463470953261083, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  - {fileID: -4873396198196955734, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  - {fileID: -8461736344866772656, guid: 98d1a51d4072f3342b2bf7c145822b94, type: 3}
-  m_MinSpeed: 6
-  m_MaxSpeed: 6
+  m_AnimatedSprites: []
+  m_MinSpeed: 1
+  m_MaxSpeed: 1
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 1
+  m_TileColliderType: 0
