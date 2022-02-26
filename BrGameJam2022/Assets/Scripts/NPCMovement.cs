@@ -32,30 +32,26 @@ public class NPCMovement : MonoBehaviour
     }
 
 
-    void Update()
-    {
-
-        //Where to start, the radius to check, what layer mask to search for
-        isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, player);
-        inPlayerRange = Physics2D.OverlapCircle(transform.position, checkRadius, player);
-
-
-        //dir is which direction to go, the target's position is subtracted from the current position of the gameObject
-        dir = target.position - transform.position;
-        // the angle of the target
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        dir.Normalize();
-        movement = dir;
-
-
-
-    }
+ 
 
     private void FixedUpdate()
     {
 
-        
-        
+        if (PlayerController.pc.playerHealth > 0 && PlayerController.pc.playerAlive && target != null)
+        {
+            //Where to start, the radius to check, what layer mask to search for
+            isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, player);
+            inPlayerRange = Physics2D.OverlapCircle(transform.position, checkRadius, player);
+
+            //dir is which direction to go, the target's position is subtracted from the current position of the gameObject
+            dir = target.position - transform.position;
+            // the angle of the target
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dir.Normalize();
+            movement = dir;
+        }
+
+
         if (inPlayerRange)
         {
             MoveCharacter(movement);

@@ -61,6 +61,8 @@ public class PlayerController : MonoBehaviour
     public bool canClimbDownManhole = false;
     public bool hasDiscoveredAlien = false;
 
+    public bool playerAlive = true;
+
     private void Awake()
     {
         pc = this;
@@ -85,6 +87,7 @@ public class PlayerController : MonoBehaviour
         Destroy(playerHealthBar.transform.GetChild(0).gameObject);
         if(playerHealth <= 0)
         {
+            playerAlive = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if(playerHealth > 0)
