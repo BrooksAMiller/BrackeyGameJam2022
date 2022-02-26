@@ -272,7 +272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &118269180
 GameObject:
@@ -793,7 +793,7 @@ Transform:
   - {fileID: 1894888428}
   - {fileID: 1797965798}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218096505
 GameObject:
@@ -898,11 +898,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.15
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4
+      value: -3.22
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -936,9 +936,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241885, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6346216357205161634, guid: 3a619501db93a1e41bcba985c0c4f33a, type: 3}
     - target: {fileID: 8922609405220241887, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_Name
-      value: NPC (5)
+      value: Influencer
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405519347705, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_IsTrigger
@@ -2257,7 +2261,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &457424533
 GameObject:
@@ -2924,12 +2928,20 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.21
+      value: 4.83
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.37
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2963,9 +2975,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241885, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7790203097515640350, guid: 47a500f2ecb714b49bc5661ca1a505f0, type: 3}
     - target: {fileID: 8922609405220241887, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_Name
-      value: NPC (3)
+      value: Karen
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405519347705, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_IsTrigger
@@ -6416,7 +6432,7 @@ Transform:
   - {fileID: 1799239754}
   - {fileID: 592765620}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &810816596
 GameObject:
@@ -6521,11 +6537,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.17
+      value: 8.55
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.34
+      value: -3.32
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6559,9 +6575,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241885, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3603566185124921188, guid: aa829cfdd2953814c82f74169a93c76c, type: 3}
     - target: {fileID: 8922609405220241887, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_Name
-      value: NPC (4)
+      value: Anti-Vax
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405519347705, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_IsTrigger
@@ -7139,7 +7159,7 @@ Transform:
   m_Children:
   - {fileID: 1965289228}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945298420
 GameObject:
@@ -7597,12 +7617,16 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.67
+      value: -3.71
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.34
+      value: -3.24
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7636,9 +7660,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241885, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 94711503687753992, guid: efd959204d18f2243a803a22311310c7, type: 3}
     - target: {fileID: 8922609405220241887, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_Name
-      value: NPC (1)
+      value: Nerd
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405519347705, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_IsTrigger
@@ -10186,7 +10214,7 @@ Transform:
   m_Children:
   - {fileID: 657095735}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519690701
 GameObject:
@@ -10355,7 +10383,7 @@ Transform:
   - {fileID: 230800204}
   - {fileID: 954507857}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1522463882
 Animator:
@@ -10737,7 +10765,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: ad82203bf0ae4634c9ccd9581ca7d81a, type: 2}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11116,7 +11144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1720348072
 GameObject:
@@ -11303,7 +11331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1744620819
 MonoBehaviour:
@@ -12504,7 +12532,7 @@ Transform:
   m_Children:
   - {fileID: 568669563}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -200, y: 0, z: 0}
 --- !u!1 &1918202932
 GameObject:
@@ -13845,7 +13873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2026097109
 GameObject:
@@ -14420,7 +14448,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110744242
 GameObject:
@@ -14967,15 +14995,15 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 5fbee85bacd04c24c871ca8e2bff49db, type: 2}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.95
+      value: -7.94
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.35
+      value: -3.22
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405220241884, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15009,9 +15037,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8922609405220241885, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7584268897231114577, guid: de8726ec056bd474dafddd4fc331b956, type: 3}
     - target: {fileID: 8922609405220241887, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: Stoner
       objectReference: {fileID: 0}
     - target: {fileID: 8922609405519347705, guid: 8f1006d60ffb1404b80531dbb2a2c4f9, type: 3}
       propertyPath: m_IsTrigger
