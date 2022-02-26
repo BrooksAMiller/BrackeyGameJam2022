@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     public GameObject playerHealthBar;
 
     public bool canClimbDownManhole = false;
-    public bool canDiscoverAlien = false;
+    public bool hasDiscoveredAlien = false;
 
     private void Awake()
     {

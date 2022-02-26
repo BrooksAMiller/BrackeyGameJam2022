@@ -30,6 +30,8 @@ public class DialogueNode : StateMachineBehaviour
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
+            
         foreach (Transform child in GameController.gc.dialogueObject.transform.GetChild(2).transform)
         {
             GameObject.Destroy(child.gameObject);

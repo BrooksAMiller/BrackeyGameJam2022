@@ -301,7 +301,7 @@ MonoBehaviour:
       anything strange as of today?
     action: 4
   changeBG: {fileID: 0}
-  extraMethod: 
+  extraMethod: HasDiscoveredAlien
 --- !u!1101 &3908027866178952212
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

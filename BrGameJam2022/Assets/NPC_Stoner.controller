@@ -273,7 +273,7 @@ MonoBehaviour:
   text: Yeah little green dude is server za over at GateWat Pizza
   options: []
   changeBG: {fileID: 0}
-  extraMethod: 
+  extraMethod: HasDiscoveredAlien
 --- !u!1101 &3329649430536538524
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
