@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class BossBattleScript : MonoBehaviour
 {
+
+    public int health;
+
+    public Transform groundChecker;
+    public bool isGrounded;
+    public LayerMask groundCheckLayer;
+
     public float speed; //speed of gameObject
     public float checkRadius;
     public float attackRadius;
+    public float groundRadius;
 
     private bool shouldRotate;
     public SpriteRenderer MySpriteRenderer;
@@ -47,35 +55,35 @@ public class BossBattleScript : MonoBehaviour
         dir.Normalize();
         movement = dir;
 
-
+        anim.SetBool("Jump", isGrounded);
 
     }
 
     private void FixedUpdate()
     {
 
-
-
+        isGrounded = Physics2D.OverlapCircle(groundChecker.position, groundRadius, groundCheckLayer);
+        Debug.Log(isGrounded);
         if (inPlayerRange)
         {
             MoveCharacter(movement);
             target = GameObject.FindWithTag("Player").transform;
             Debug.Log("Player is target");
-            if (Mathf.Round(transform.position.x) == (target.position.x) && Mathf.Round(transform.position.y) == (target.position.y))
-            {
-                Debug.Log("Attack Target");
-
-            }
 
             if (isInAttackRange)
             {
-                rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-            }
+                if (Mathf.Round(transform.position.y) == Mathf.Round(target.position.y))
+                {
+                    anim.SetBool("Attack", true);
 
+                }
+                 rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+            }
+            
         }
         else
         {
-
+            anim.SetBool("Attack", false);
             target = targetQueue.Peek();
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -87,7 +95,7 @@ public class BossBattleScript : MonoBehaviour
             }
             else
             {
-                if (targetHit == 4)
+                if (targetHit == 3)
                     targetHit = 0;
                 MoveCharacter(movement);
             }
@@ -109,7 +117,7 @@ public class BossBattleScript : MonoBehaviour
         {
             MySpriteRenderer.flipX = true;
         }
-        if (target == GameObject.FindWithTag("Player").transform)
+        if (target == GameObject.FindWithTag("Player").transform)   
         {
             rb.MovePosition((Vector3)transform.position + (dir * speed * Time.deltaTime));
         }
@@ -131,10 +139,6 @@ public class BossBattleScript : MonoBehaviour
             targetQueue.Enqueue(target3);
         }
         else if (targetHit == 3)
-        {
-            targetQueue.Enqueue(target2);
-        }
-        else
         {
             targetQueue.Enqueue(target1);
         }
