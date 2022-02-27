@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
         {
             GameController.gc.dialogueObject.SetActive(true);
             interactableNPC.GetComponent<Animator>().enabled = true;
-
+            
             //GameController.gc.dialogueObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.name;
 
             //GameController.gc.dialogueObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = interactableNPC.GetComponent<NPCDialogue>().answers[Random.Range(0, interactableNPC.GetComponent<NPCDialogue>().answers.Length)];
