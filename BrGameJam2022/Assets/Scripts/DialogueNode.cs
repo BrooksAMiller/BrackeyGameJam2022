@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueNode : StateMachineBehaviour
 {
-    public enum Actions { next, back, option1, option2, option3 }
+    public enum Actions { next, back, option1, option2, option3, option4 }
     [TextArea]
     public string text;
 
