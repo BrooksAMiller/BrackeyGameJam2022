@@ -30,16 +30,16 @@ public class NPCDialogue : MonoBehaviour
             if (!PlayerController.pc.hasDiscoveredAlien && gameObject.tag == "AlienTruck")
             {
                 gameObject.transform.GetChild(1).gameObject.SetActive(false);
+
             }
-            else
-            {
+
                 GetComponent<Animator>().enabled = false;
                 transform.GetChild(0).gameObject.SetActive(false);
                 PlayerController.pc.canInteractWithNPC = false;
                 PlayerController.pc.interactableNPC = null;
                 if (GameController.gc.dialogueObject.activeSelf)
                     GameController.gc.dialogueObject.SetActive(false);
-            }
+
         }
     }
 
