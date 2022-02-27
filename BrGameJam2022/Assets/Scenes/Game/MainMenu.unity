@@ -198,6 +198,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2218946691078612185, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945747396786907641, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163598096820176187, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4662893309531081331, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
@@ -292,6 +300,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4662893310191882907, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662893310191882907, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662893310191882907, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662893310191882907, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4662893310287670700, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
       propertyPath: m_text
       value: The Conspiracy Agency
@@ -332,6 +356,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4662893310559858075, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 146
+      objectReference: {fileID: 0}
     - target: {fileID: 4662893310961277049, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -366,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8646634734690887543, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf4dc5b83584084b98bc2a632d6ac40, type: 3}
